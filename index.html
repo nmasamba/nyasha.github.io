@@ -1,9 +1,290 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <meta name="description" content="Minimal personal homepage: projects, writing, patents, publications." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111;
+      --muted:#555;
+      --faint:#888;
+      --rule:#e6e6e6;
+      --link:#0b57d0;
+      --chipbg:#f2f4ff;
+      --chipfg:#2b2f9e;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing:border-box }
+
+    body{
+      margin:0;
+      background:#fcfcfc;
+      color:var(--fg);
+      font-family:var(--sans);
+      line-height:1.55;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:20px auto;
+      padding:34px 34px 70px;
+      background:var(--bg);
+      border:1px solid var(--rule);
+      border-radius:16px;
+      box-shadow:0 14px 40px rgba(0,0,0,0.05);
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:underline; }
+
+    /* ---------- HEADER ---------- */
+
+    header{
+      margin-bottom:18px;
+    }
+
+    .header-row{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .avatar{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      object-fit:cover;
+      border:1px solid var(--rule);
+      background:#f2f2f2;
+      flex-shrink:0;
+    }
+
+    h1{
+      margin:0 0 4px;
+      font-size:34px;
+      letter-spacing:0.2px;
+      line-height:1.15;
+    }
+
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      padding:10px 0 2px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .meta .sep{ color:var(--faint); }
+
+    .hero{
+      margin-top:14px;
+      font-size:16px;
+    }
+    .hero p{ margin:8px 0; }
+
+    .tagline{
+      color:var(--muted);
+      font-style:italic;
+    }
+
+    /* ---------- METRICS ---------- */
+
+    .metrics{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:14px 0 6px;
+      padding:0;
+      list-style:none;
+    }
+
+    .metrics li{
+      border:1px solid var(--rule);
+      border-radius:12px;
+      padding:10px 12px;
+      min-width:160px;
+      background:#fafafa;
+    }
+
+    .metrics .v{
+      display:block;
+      font-weight:650;
+      font-size:15px;
+      margin-bottom:4px;
+    }
+
+    .metrics .l{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    hr{
+      border:none;
+      border-top:1px solid var(--rule);
+      margin:18px 0;
+    }
+
+    h2{
+      font-size:18px;
+      margin:0 0 10px;
+    }
+
+    section{
+      margin:14px 0;
+    }
+
+    ul{
+      margin:8px 0 0;
+      padding-left:18px;
+    }
+
+    li{ margin:6px 0; }
+
+    .chip{
+      display:inline-block;
+      margin-left:8px;
+      padding:2px 8px;
+      border-radius:999px;
+      background:var(--chipbg);
+      color:var(--chipfg);
+      font-size:11px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      vertical-align:middle;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .mono{
+      font-family:var(--mono);
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    @media (max-width: 640px){
+      .wrap{
+        margin:0;
+        border-radius:0;
+        box-shadow:none;
+        padding:24px 18px 50px;
+      }
+
+      h1{ font-size:28px; }
+      .avatar{ width:56px; height:56px; }
+    }
+  </style>
+</head>
+
 <body>
+  <div class="wrap">
 
-<h1>Nyasha (pronounced Nïasha - no 'y' in there) Masamba</h1>
-<p>AI Eng | Data Sci | Academia</p>
+    <header>
+      <!-- HEADER WITH AVATAR -->
+      <div class="header-row">
+        <img
+          src="photo.jpg"
+          alt="Nyasha Masamba"
+          class="avatar"
+        />
+        <div>
+          <h1>Nyasha Masamba</h1>
+          <p class="subtitle">
+            Engineering and research leader building reliable systems across healthcare and financial services.
+          </p>
+        </div>
+      </div>
 
+      <div class="meta">
+        <span>✉ <a href="mailto:you@example.com">nyasha.masamba@gmail.com</a></span>
+        <span class="sep">·</span>
+        <span>📍 Bristol, UK</span>
+        <span class="sep">·</span>
+        <span><a href="https://github.com/your-handle" target="_blank">GitHub</a></span>
+        <span class="sep">·</span>
+        <span><a href="https://www.linkedin.com/in/your-handle" target="_blank">LinkedIn</a></span>
+        <span class="sep">·</span>
+        <span><a href="https://scholar.google.com" target="_blank">Google Scholar</a></span>
+        <span class="sep">·</span>
+        <span><a href="/cv.pdf" target="_blank">CV (PDF)</a></span>
+      </div>
+
+      <div class="hero">
+        <p>
+          I work on AI systems where errors are expensive: clinical decision support,
+          risk modelling, and production-grade inference.
+        </p>
+        <p class="tagline">
+          Current focus: personalised cancer-risk modelling and systematic multi-asset research.
+        </p>
+      </div>
+
+      <ul class="metrics">
+        <li><span class="v">5+</span><span class="l">papers / preprints</span></li>
+        <li><span class="v">2+</span><span class="l">patents in progress</span></li>
+        <li><span class="v">3</span><span class="l">open-source tools</span></li>
+        <li><span class="v">£XM+</span><span class="l">value influenced</span></li>
+      </ul>
+    </header>
+
+    <hr />
+
+    <section>
+      <h2>Current Projects & Open Source</h2>
+      <ul>
+        <li>
+          <a href="#">Biologik OS</a> — Personalised cancer-risk modelling platform
+          <span class="chip">Health</span>
+        </li>
+        <li>
+          <a href="#">Deepmint</a> — Analyst-first multi-asset factor & options research framework
+          <span class="chip">Finance</span>
+        </li>
+        <li>
+          <a href="#">MAICA</a> — Multi-agent solution for rapid, robust processing of insurance claims
+          <span class="chip">Infra</span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications (selected)</h2>
+      <p class="small">
+        Full list on <a href="#">Google Scholar</a>.
+      </p>
+      <ul>
+        <li><strong>Paper title</strong> — Venue, Year. One-line impact.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Patents</h2>
+      <ul>
+        <li><strong>Longitudinal lifestyle-aware cancer risk estimation</strong> — in preparation</li>
+      </ul>
+    </section>
+
+    <hr />
+
+  </div>
 </body>
 </html>
